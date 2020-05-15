@@ -1,4 +1,5 @@
 $(document).ready(() => {
+	const app = $("#app");
 	const main = $("main");
 	const form = $("form");
 	const input = $("input");
@@ -19,6 +20,7 @@ $(document).ready(() => {
 		}
 	}
 
+	app[0].style.height = window.innerHeight;
 	scrollToEnd();
 	form.submit(send);
 });
