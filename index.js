@@ -20,7 +20,7 @@ $(document).ready(() => {
 		}
 	}
 
-	app[0].style.height = window.innerHeight;
+	app[0].style.height = `${window.innerHeight}px`;
 	scrollToEnd();
 	form.submit(send);
 });
