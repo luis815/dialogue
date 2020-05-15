@@ -1,0 +1,81 @@
+$main-color: #9b4dca;
+$bg-color: rgb(244, 245, 246);
+
+#soon {
+	display: none;
+}
+
+#app {
+	//As parent
+	display: flex;
+	flex-direction: column;
+
+	min-height: 450px;
+	height: 100vh;
+
+	h1 {
+		margin: 10px 20px;
+		white-space: nowrap;
+		overflow-x: hidden;
+		min-height: min-content;
+		text-overflow: ellipsis;
+	}
+
+	main {
+		//As a parent
+		display: flex;
+		flex-direction: column;
+
+		//As child
+		flex-grow: 1;
+
+		overflow: auto;
+		padding: 0 20px;
+
+		p {
+			margin: 5px 0;
+			padding: 15px;
+			border-radius: 15px;
+			max-width: 300px;
+
+			&:first-of-type {
+				margin-top: auto;
+			}
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			&.someone {
+				margin-right: auto;
+				background-color: $bg-color;
+			}
+
+			&.self {
+				margin-left: auto;
+				background-color: $main-color;
+				color: white;
+			}
+		}
+	}
+
+	form {
+		//As parent
+		display: flex;
+		flex-direction: row;
+
+		margin: 10px 20px;
+
+		input {
+			//As child
+			flex-grow: 1;
+
+			margin: 0;
+		}
+
+		button {
+			margin: 0;
+			margin-left: 10px;
+		}
+	}
+}
